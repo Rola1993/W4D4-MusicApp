@@ -1,0 +1,27 @@
+<h1><%= @band.name %></h1>
+
+<table>
+  <!-- <tr>
+    <th>Attribute</th>
+    <th>Value</th>
+  </tr> -->
+</table>
+
+<!-- <a href="<%= edit_band_url(@band) %>">Edit <%= @band.name %></a> -->
+
+<form class="" action="<%= edit_band_url(@band) %>" method="get">
+  <input type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>"
+    >
+  <input type="submit" name="" value="Edit">
+</form>
+
+<form class="" action="<%= band_url(@band) %>" method="post">
+  <input type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>"
+    >
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" name="" value="Delete">
+</form>

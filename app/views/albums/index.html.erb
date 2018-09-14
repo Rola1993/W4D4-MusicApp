@@ -1,0 +1,9 @@
+<h1>All Albums in Inventory</h1>
+
+<ul>
+  <% @albums.each do |album| %>
+    <li><a href="<%= album_url(album) %>"><%= album.title %></a></li>
+  <% end %>
+</ul>
+
+<a href="<%= new_album_url %>">Create Album</a>
